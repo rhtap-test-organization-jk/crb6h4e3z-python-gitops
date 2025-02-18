@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: crb6h4e3z-python-gitops
+  description: This is GitOps manifest for crb6h4e3z-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=crb6h4e3z-python
+    backstage.io/kubernetes-id: crb6h4e3z-python 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: crb6h4e3z-python-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:crb6h4e3z-python
